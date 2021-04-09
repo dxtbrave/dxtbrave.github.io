@@ -6,8 +6,8 @@ $("#open").click(function(){
 	if(!aparted)
 	{
 		var typed = new Typed('.letter', {
-			strings: ["^1000Dear&nbsp;&nbsp;Alice", 
-				"アリス^200ちゃん<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;バレンタインデーは^300いつも^200寒いよね、^600でも、^600手を^200繋いでいると、^600暖か^200くなるよ！<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;どんなに^300寒い夜も、^600君と^300二人でいれば、^600ちっとも^300寒くない！<br><br><p style='float:right; display:block; width:80px;'>^1000ボブ^200より</p>"],
+			strings: ["^1000Dear&nbsp;&nbsp;DHL", 
+				"亲爱的^200邓慧玲<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;九月的记忆回想起来,^300就好像是在盛夏做了一场梦。^200最初只是模糊地记得^600那无尽的蝉鸣和黏腻的湿热感，^600后来我想到了你，^200一切记忆又逐渐清晰了起来。^600有那波光的湖面，^200湖边嬉闹的身影，^200我们的笑声。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以及你附在我耳边的那句：^300<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我爱你，^600所以你不再是一座孤岛。<br><p style='float:right; display:block; width:80px;'>^1000董笑天</p>"],
 			typeSpeed: 100,
 			backSpeed: 50
 		});
