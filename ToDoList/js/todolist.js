@@ -1,5 +1,8 @@
 $(function () {
     load();
+    $('#title').on('focus', function () {
+        $(this).val('');
+    })
     $('#title').on("keydown", function (e) {
         if (e.keyCode === 13) {
             if ($(this).val() == "") {
@@ -17,9 +20,21 @@ $(function () {
             }
         }
     });
-
+    // 添加按钮的功能
+    $('#submit').on('click', function () {
+        if ($(this).siblings('#title').val() == '') {
+            
+        } else {
+            var data = getDate();
+            data.push({ title: $(this).siblings('#title').val(), done: false });
+            saveDate(data);
+            load();
+        }
+    })
     // todolist删除操作
     $('ol,ul').on('click', 'a', function () {
+        var flag = confirm('是否清除该条任务？');
+        if (flag) {
         // 先获取本地存储
         var data = getDate();
         // 修改数据
@@ -28,7 +43,11 @@ $(function () {
         // 保存到本地存储
         saveDate(data);
         // 重新渲染页面
-        load();
+        load(); 
+        } else {
+            load();
+        }
+        
     })
     // todolist完成任务操作
     $('ol , ul').on('click', 'input', function () {
@@ -42,10 +61,10 @@ $(function () {
         // 重新渲染页面
         load();
     })
-    // 按清除，清除所有数据
+    // 底部清除，清除所有数据
     $('#clean').on('click', function () {
         // prompt('是否清除所有数据？');
-        var flag = confirm('是否清除所有数据？');
+        var flag = confirm('是否清除所有任务？');
         // console.log(flag);
         if (flag) {
             // var data = getDate();

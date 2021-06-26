@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.css">
 	<link rel="stylesheet" href="../css/index.css">
 	<style>
-		.progress{
+		.progress {
 			width: 100%;
 			margin-top: 15px;
 		}
@@ -23,6 +23,7 @@
 		<section>
 			<form action="javascript:;" id="form">
 				<label for="title">ToDoList</label>
+				<button id="submit" type="button" class="btn btn-success">提交</button>
 				<input type="text" id="title" name="title" placeholder="添加ToDo" required="required"
 					autocomplete="off" />
 			</form>
@@ -30,9 +31,10 @@
 	</header>
 	<section>
 		<div class="progress">
-			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0">
+			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45"
+				aria-valuemin="0" aria-valuemax="100" style="width: 0">
 			</div>
-		  </div>
+		</div>
 		<h2 onclick="save()">正在进行 <span id="todocount"></span></h2>
 		<ol id="todolist" class="demo-box">
 		</ol>
@@ -44,7 +46,7 @@
 		Copyright &copy; 2021 董笑天 <a href="javascript:;" id="clean">清除</a>
 	</footer>
 	<!-- <script type="text/javascript" src="index.js"></script> -->
-	
+
 </body>
 <script>
 
