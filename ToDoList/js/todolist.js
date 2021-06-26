@@ -1,4 +1,3 @@
-
 $(function () {
     load();
     $('#title').on("keydown", function (e) {
@@ -43,6 +42,21 @@ $(function () {
         // 重新渲染页面
         load();
     })
+    // 按清除，清除所有数据
+    $('#clean').on('click', function () {
+        // prompt('是否清除所有数据？');
+        var flag = confirm('是否清除所有数据？');
+        // console.log(flag);
+        if (flag) {
+            // var data = getDate();
+            // data = [];
+            // saveDate(data);
+            localStorage.removeItem('todolist');
+            load();
+        } else {
+            load();
+        }
+    })
     // 读取本地存储的数据
     function getDate() {
         var data = localStorage.getItem('todolist');
@@ -80,5 +94,8 @@ $(function () {
         })
         $('#todocount').html(b);
         $('#donecount').html(a);
+        var percent = a/(a+b)*100;
+        // console.log(percent);
+        $('.progress-bar').css('width',percent+'%');
     }
 })
